@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .main-header {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .main-header h1 {
+    color: #fff;
+    margin: 0;
+  }
+  
+  .gallery {
+    padding: 20px;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+    justify-items: center; /* Center the grid items horizontally */
+    align-items: center; /* Center the grid items vertically */
+  }
+  
+  .grid-item {
+    position: relative;
+  }
+  
+.grid-item img {
+  width: 200px; /* Set a fixed width for all images */
+  height: 200px; /* Set a fixed height for all images */
+  object-fit: cover;
+  cursor: pointer;
+}
+
+
+  .lightbox-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+    text-align: center;
+    padding-top: 10vh;
+  }
+  
+  .lightbox-modal img {
+    max-width: 80%;
+    max-height: 70vh;
+    border-radius: 5px;
+  }
+  
+  .lightbox-modal .lightbox-caption {
+    color: #fff;
+    font-size: 20px;
+    margin-top: 10px;
+  }
+  
+  .lightbox-modal .lightbox-close,
+  .lightbox-modal .lightbox-prev,
+  .lightbox-modal .lightbox-next {
+    position: absolute;
+    font-size: 40px;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .lightbox-modal .lightbox-close {
+    right: 20px;
+    top: 10px;
+  }
+  
+  .lightbox-modal .lightbox-prev {
+    left: 20px;
+    top: calc(50% - 20px);
+    transform: none;
+  }
+  
+  .lightbox-modal .lightbox-next {
+    right: 20px;
+    top: calc(50% - 20px);
+    transform: none;
+  }
+
+  
