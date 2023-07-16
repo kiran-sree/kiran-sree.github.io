@@ -59,11 +59,32 @@
       <div class="control-icon next-icon" onclick="nextSlide()">&#10095;</div>
     </div>
 
-
+<!-- click box area start  -->
     <div class="hero container">
-      <a type="button" class="cta">Gpay- 6282054069</a><!-- button slide image -->>
+      <a type="button" class="cta" id="phoneNumberButton" data-phone-number="6282054069">Click to copy- 6282054069</a>
     </div>
-
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const phoneNumberButton = document.getElementById("phoneNumberButton");
+        phoneNumberButton.addEventListener("click", function () {
+          const phoneNumber = phoneNumberButton.getAttribute("data-phone-number");
+          copyToClipboard(phoneNumber);
+          alert("Phone number copied to clipboard: " + phoneNumber);
+        });
+      });
+    
+      function copyToClipboard(text) {
+        const input = document.createElement("textarea");
+        input.style.position = "fixed";
+        input.style.opacity = 0;
+        input.value = text;
+        document.body.appendChild(input);
+        input.select();
+        document.execCommand("copy");
+        document.body.removeChild(input);
+      }
+    </script>
+ <!-- click box area start  -->   
 
   </section>
   <!-- End Hero Section  -->

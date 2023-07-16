@@ -348,7 +348,7 @@ p {
   #hero .cta {
 	display: inline-block;
 	margin-top: 20px;
-	padding: 10px 20px;
+	padding: 2px 20px;/* Adjust the size of box padding*/
 	background-color: crimson;
 	color: white;
 	font-size: 1.5rem;
@@ -357,7 +357,12 @@ p {
 	position: relative;
 	animation: cta_fade 1s ease forwards;
 	animation-delay: 0s; /* Delay the animation for 4 seconds */ /* button of slide image css*/
+	
+
+	position: absolute; /* Change to absolute to allow positioning */
+	top: 90px; /* Adjust the distance from the bottom */
   }
+  
   
   @keyframes cta_fade {
 	0% {
